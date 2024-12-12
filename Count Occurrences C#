@@ -1,0 +1,36 @@
+using System;
+class A
+{
+    public void Show1()
+    {
+        int[] arr = { 1, 1, 2, 2, 2, 2, 3 };
+        int Target = 2;
+
+        int count = Show(arr, Target);
+        Console.WriteLine("The Number of Target is :" + Target);
+        Console.WriteLine("The Number of occurs is : " + count);
+    }
+    public int Show(int[] arr, int Target)
+    {
+        int count = 0;
+        foreach (int ver in arr)
+        {
+            if (ver == Target)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+       
+}
+class B
+{
+    public static void Main(string[] args)
+    {
+        A obj = new A();
+        obj.Show1();
+        Console.ReadLine();
+      
+    }
+}
