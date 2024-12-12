@@ -1,0 +1,50 @@
+using System;
+
+public class A
+{
+  public int Show(int A, int B,int N)
+    {
+      switch (N)
+         {
+             case 1:
+               return A + B;
+                case 2:
+                    return A - B;
+                case 3:
+                    return A * B;
+                case 4:
+                    return A / B;
+                default:
+                    return -1;
+            }
+        }
+        
+    }
+    class B
+    {
+        public static void Main(string[] args)
+        {
+            A obj = new A();
+            Console.WriteLine("Enter First Number : ");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Seconde number : ");
+            int num2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Choose Any One :");
+            Console.WriteLine("Enter '1' For Addition ");
+            Console.WriteLine("Enter '2' For Subtraction ");
+            Console.WriteLine("Enter '3' For Multiplication ");
+            Console.WriteLine("Enter '4' For Divition");
+            Console.WriteLine("Enter Your Choose : ");
+            int num3 = int.Parse(Console.ReadLine());
+            int Result = obj.Show(num1,num2,num3);
+            if (Result != -1)
+            {
+                Console.WriteLine("Result: " + Result);
+            }
+            else
+            {
+                Console.WriteLine("Enter Currect Number.");
+            }
+            Console.ReadLine();
+        }
+    }
