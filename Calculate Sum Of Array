@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SumOfArray
+{
+    internal class Program
+    {
+        public int Show(int[]num)
+        {
+            int sum = 0;
+            foreach(int obj in num)
+            {
+                 sum += obj;
+            }
+            return sum;
+        }
+         public static void Main(string[] args)
+        {
+            Program program = new Program();
+            int[] num = { 2,3,4,5,6};
+            int totalsum = program.Show(num);
+            Console.WriteLine("Total Sum of Array is : "+totalsum);
+            Console.ReadLine();
+        }
+    }
+}
