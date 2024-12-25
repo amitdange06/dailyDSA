@@ -1,0 +1,18 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+ static int singleNumber(vector<int>& arr)
+     {
+        int ans = 0;
+        for(int item : arr)
+        {
+            ans ^= item;
+        }
+     return ans;
+    }
+int main()
+{
+    vector<int>arr = {1,1,2,2,3,3,4};
+    cout<<"Unique Value : "<<singleNumber(arr);
+    return 0;
+}
