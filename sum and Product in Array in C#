@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp13
+{
+  class Program
+    {
+        public static void CalaculateSumAndProduct(int [] arr,int size,out int sum,out int product)
+        {
+            sum = 0;
+            product = 1;
+            foreach(int i in arr)
+            {
+                sum += i;
+                product *= i;
+            }
+        }
+        static void Main(string[] args)
+        {
+            int [] arr  = {1,2,3,4,5};
+            int size = 5;
+            int product, sum;
+            CalaculateSumAndProduct(arr, size, out sum, out product);
+
+            Console.WriteLine("Sum : " + sum);
+            Console.WriteLine("Product : "+ product);
+
+            Console.ReadLine();
+
+
+        }
+    }
+}
