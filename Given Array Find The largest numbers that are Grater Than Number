@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int x;
+    cout << "Enter The Value of X: " << endl;
+    cin >> x;
+
+    int n;
+    cout << "Enter Number of Size: " << endl;
+    cin >> n;
+    int arr[n]; 
+
+    int count = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+        if (arr[i] > x)
+        {
+            count++;
+        }
+    }
+
+    cout << "Number of elements greater than X is: " << count << endl;
+
+    return 0;
+}
